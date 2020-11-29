@@ -5,6 +5,11 @@ class SberMailSerializer(serializers.ModelSerializer):
     class Meta:
         model = SberMail
         fields = ['id', 'date', 'mail', 'subject', 'text', 'short_text', 'tags', 'priority']
+
+class SberMailListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SberMail
+        fields = ['id', 'priority']
     # id = serializers.IntegerField(read_only=True)
     # mail_id = serializers.CharField(max_length=100)
     # date = serializers.CharField(max_length=100)

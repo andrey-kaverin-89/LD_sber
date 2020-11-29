@@ -10,7 +10,7 @@ class SberMail(models.Model):
     text = models.TextField()
     short_text = models.TextField()
     tags = models.TextField()
-    priority = models.PositiveIntegerField()
+    priority = models.CharField(max_length=1)
     seen = models.BooleanField(default=False)
 
     # priority = models.PositiveIntegerField()
