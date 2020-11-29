@@ -1,5 +1,6 @@
 import os
 import json
+from forward_ranker import get_mail
 # import time
 from django.core import serializers
 from django.shortcuts import render, get_object_or_404
@@ -83,9 +84,7 @@ def mail_unsee(request, pk):
 def forwardlist(request, pk):
     mail = get_object_or_404(SberMail, id=pk)
     if request.method == 'GET':
-        data_to_send = ["Garbuzova.El.An@omega.sbrf.ru",
-        "Burlakova.M.Val@sberbank.ru", "Zibarev.L.I@sberbank.ru",
-        "Fedotov.I.Ser@omega.sbrf.ru", "Konyrev.D.A@mail.ca.sbrf.ru"]
+        data_to_send = get_mail(mail.text)
         list = json.dumps(data_to_send)
         print(list)
         return JsonResponse(list, safe=False)
