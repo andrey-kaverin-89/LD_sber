@@ -1,0 +1,20 @@
+@import url('variables.scss');
+@import url('fonts.scss');
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+}
+body, html {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+}
+button {
+  &:hover {
+    cursor: pointer;
+  }
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
