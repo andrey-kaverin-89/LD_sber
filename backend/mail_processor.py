@@ -69,8 +69,8 @@ def stemming(text):
     tokens = [word for word in tokens if len(word) > 2]
     return tokens
 
-EMAIL = 'adva.mailer.pub@gmail.com'
-PASSWORD = 'qazwsxedcrfvtgbyhn123456'
+EMAIL = '-'
+PASSWORD = '-'
 SERVER = 'imap.gmail.com'
 
 mail = imaplib.IMAP4_SSL(SERVER, 993)
